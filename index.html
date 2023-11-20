@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>360 agency</title>
+  <link href="styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>360 agency</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">O nás</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Služby">Služby</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Kontakt">Kontakt</a>
+      <a href="#" onclick="slowScroll('#faq')" title="FAQ">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Vítejte v</h1>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Jsme kreativní agentura</h2>
+      <span>Nabidneme vam to, co vlastně potřebujete</span>
+    </div>
+    <div class="text">
+      <span>Naše agentura vstupuje do světa tvorby obsahu s vášní a kreativitou. Jsme tým odborníků na natáčení, reklamu a sociální média, kteří spojují síly, aby přivedli vaše vizuální příběhy k životu. Od profesionálních filmových produkcií a inovativních reklamních kampaní až po strategické řízení sociálních médií, jsme tady, abychom vám pomohli vyniknout v digitálním prostoru.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Co vlastně děláme?</h2>
+    <h4>U nás je to lepší</h4>
+
+    <div class="img">
+      <img src="https://i.imgur.com/UeZBUp2.png" alt="">
+      <span>Vyvoj aplikace</span>
+    </div>
+    <div class="img">
+      <img src="https://i.imgur.com/Tmb6Qyx.png" alt="">
+      <span>Té nejlepší videa</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Máte zajem o spoluprace?</h5></center>
+    <form id="form_input">
+      <label for="name">Jmeno <span>*</span></label><br>
+      <input type="text" placeholder="Napište vaše jmeno" name="name" id="name"><br>
+      <label for="email">Vaš e-mail <span>*</span></label><br>
+			<input type="email" placeholder="Napište email" name="email" id="email"><br>
+			<label for="message">Zprava <span>*</span></label><br>
+			<textarea placeholder="Napište váší zpravu" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Odeslat</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Reklamní Kampaně</span><br>
+      <span class="heading">Jakou zprávu chcete sdělit?</span>
+      <p>Naše tým kreativních odborníků vám pomůže vytvořit poutavé reklamní kampaně, které zaručeně osloví váš trh..</p>
+      
+    </div>
+    <div>
+      <span class="title">Kvalitní Video</span><br>
+      <span class="heading">Co chcete dosáhnout svým videem?</span>
+      <p>Jsme tu pro vás s naším zaměřením na vysokou kvalitu, abychom vytvořili videa, která nejen přitahují pozornost, ale také silně komunikují s vaším publikem.</p>
+      
+    </div>
+    <div>
+      <span class="title">Efektivní Strategie</span><br>
+      <span class="heading">Jaký je váš cíl na sociálních sítích? </span>
+      <p>Naše strategie sociálních médií nejen posílí vaši online přítomnost, ale také podporuje aktivní interakci s vaší cílovou skupinou. Jak můžeme podporovat váš brand v online světě?</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
